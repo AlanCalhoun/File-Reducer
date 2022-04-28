@@ -4,7 +4,7 @@ import pandas as pd
 start_date = '1/1/2021' 
 
 #list of files to reduce
-#'path to file'"'column name that has the date to filter'
+#'path to file':'column name that has the date to filter'
 files = {
     'C:\Power BI\Form Status.csv':'Date - Last Modified',
     'C:\Power BI\Payment.csv':'Date - Transaction',
