@@ -1,0 +1,25 @@
+import pandas as pd
+
+#cut off date for .csv files
+start_date = '1/1/2021' 
+
+#list of files to reduce
+#'path to file'"'column name that has the date to filter'
+files = {
+    'C:\Power BI\Form Status.csv':'Date - Last Modified',
+    'C:\Power BI\Payment.csv':'Date - Transaction',
+    'C:\Power BI\Appointment.csv':'Appointment Date',
+    'C:\Power BI\Progress Note.csv':'Date Of Service',
+    'C:\Power BI\Visit.csv':'Date Of Service',
+    'C:\Power BI\Billing.csv':'Bill Date'
+}
+
+for file_path in files:
+    print(f'Filtering {file_path}')
+    date_column = files[file_path]
+    df = pd.read_csv(file_path, index_col=False, low_memory=False)
+    df[date_column] = pd.to_datetime(df[date_column])
+    df = df[(df[date_column] >= start_date)]
+    df.to_csv(file_path, index=False)
+
+input('Press return to exit...')
