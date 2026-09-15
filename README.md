@@ -1,4 +1,4 @@
-# File-Reducer
+﻿# File-Reducer
 
 Shrink oversized CSV extracts so they are easier to open, inspect, and move through ops workflows.
 
@@ -22,4 +22,5 @@ Originally written as a Jupyter notebook with a desktop `.bat` launcher for one-
 
 ## License
 
-No license file is currently published in this repository. Contact the author if you need reuse terms.
+MIT License — see [LICENSE](LICENSE).
+
